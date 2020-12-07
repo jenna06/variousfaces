@@ -19,7 +19,7 @@
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-light nav-distance">
-            <a class="navbar-brand" href="#">나는 어떤 얼굴일까?</a>
+            <a class="navbar-brand" href="#">얼굴상 테스트</a>
             <button
                 class="navbar-toggler"
                 type="button"
@@ -83,7 +83,7 @@
             <h2 class="subtitle">나는 어떤 얼굴일까?</h2>
         </section>
         <section class="youtube">
-            <div class="youtube-cover"><a href="" class="youtube-link">By 제나코딩</a><img src="image/naverlogo2.JPG" alt="" class="youtube-icon"></div>
+            <div class="mt-5 youtube-cover d-flex flex-row-reverse"><img src="image/naverlogo2.JPG" alt="" class="youtube-icon"><a href="" class="youtube-link">By 제나코딩</a></div>
         </section>
 
         <div>Teachable Machine Image Model</div>
@@ -93,14 +93,7 @@
             class="jsbin"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
         ></script>
-        <div class="file-upload">
-            <button
-                class="file-upload-btn"
-                type="button"
-                onclick="$('.file-upload-input').trigger( 'click' )"
-            >
-                Add Image
-            </button>
+        <div class="container file-upload">
 
             <div class="image-upload-wrap">
                 <input
@@ -110,7 +103,8 @@
                     accept="image/*"
                 />
                 <div class="drag-text">
-                    <h3>Drag and drop a file or select add Image</h3>
+                    <img src="image/uploadbutton.JPG" class=mt-5 pt-5"upload">
+                    <h3 class="mb-5 pb-5 pt-4 upload-text">얼굴 사진 올리기</h3>
                 </div>
             </div>
             <div class="file-upload-content">
