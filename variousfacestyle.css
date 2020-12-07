@@ -54,15 +54,17 @@ body {
 }
 
 .image-upload-wrap {
-  margin-top: 20px;
-  border: 4px dashed #1FB264;
   position: relative;
+    object-fit: contain;
+border-radius: 10px;
+border: dashed 1.5px #35465d;
+background-color: #ffffff;
 }
 
 .image-dropping,
 .image-upload-wrap:hover {
-  background-color: #1FB264;
-  border: 4px dashed #ffffff;
+  background-color: #35465d;
+  border: 1.5px dashed #ffffff;
 }
 
 .image-title-wrap {
@@ -77,8 +79,13 @@ body {
 .drag-text h3 {
   font-weight: 100;
   text-transform: uppercase;
-  color: #15824B;
-  padding: 60px 0;
+        font-family: NanumSquareR;
+font-size: 2rem;
+line-height: 1.53;
+text-align: center;
+color: #35465d;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .file-upload-image {
@@ -158,4 +165,48 @@ color: #35465d;
     .navbar-brand{
         font-size: 2rem;
     }
+}
+
+.youtube-link {
+    font-family: NanumSquareR;
+font-size: 1.5rem;
+line-height: 1.71;
+text-align: center;
+color: #f73737;
+    text-decoration: underline;
+}
+
+.youtube-link:hover {
+    font-family: NanumSquareR;
+font-size: 1.5rem;
+line-height: 1.71;
+text-align: center;
+color: #f73737;
+    text-decoration: underline;
+}
+
+.youtube-icon {
+    width: 8%;
+}
+
+.file-upload {
+    background-color: #ffffff;
+    padding: 13% 5;
+width: 50%;
+width: 914px; height 703px; border-radius: 10px; border: solid 1.5px #f6f7fa; background-color: #f6f7fa;;
+}
+
+.element-style {
+    width: 65%
+    margin: 0 auto;
+}
+
+.upload-text{
+    width: 50%
+font-family: NanumSquareR;
+font-size: 1.6rem;
+line-height: 1.53;
+text-align: cneter;
+color: #35465d;
+margin: 0 auto;
 }
