@@ -83,18 +83,19 @@
             <h2 class="subtitle">나는 어떤 얼굴일까?</h2>
         </section>
         <section class="youtube">
-            <div class="mt-5 youtube-cover d-flex flex-row-reverse"><img src="image/naverlogo2.JPG" alt="" class="youtube-icon"><a href="" class="youtube-link">By 제나코딩</a></div>
+            <div class="mt-5 youtube-cover d-flex flex-row-reverse">
+                <img src="image/youtubelogo.jpg" alt="" class="youtube-icon" /><a
+                    href=""
+                    class="youtube-link"
+                    >By JennaLee</a
+                >
+            </div>
         </section>
-
-        <div>Teachable Machine Image Model</div>
-        <button type="button" onclick="init()">Start</button>
-        <button type="button" onclick="predict()">예측</button>
         <script
             class="jsbin"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
         ></script>
         <div class="container file-upload">
-
             <div class="image-upload-wrap">
                 <input
                     class="file-upload-input"
@@ -103,12 +104,14 @@
                     accept="image/*"
                 />
                 <div class="drag-text">
-                    <img src="image/uploadbutton.JPG" class=mt-5 pt-5"upload">
+                    <img src="image/uploadlogo.svg" class=mt-5 pt-5"upload">
                     <h3 class="mb-5 pb-5 pt-4 upload-text">얼굴 사진 올리기</h3>
                 </div>
             </div>
             <div class="file-upload-content">
                 <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                <p class="result-message"></p>
+                <div id="label-container"></div>
                 <div class="image-title-wrap">
                     <button type="button" onclick="removeUpload()" class="remove-image">
                         Remove <span class="image-title">Uploaded Image</span>
@@ -148,6 +151,10 @@
                     };
 
                     reader.readAsDataURL(input.files[0]);
+                    init().then(() => {
+                        console.log('hello');
+                        predict();
+                    });
                 } else {
                     removeUpload();
                 }
@@ -201,6 +208,23 @@
                 // predict can take in an image, video or canvas html element
                 var image = document.getElementById('face-image');
                 const prediction = await model.predict(image, false);
+                prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+                console.log(prediction[0].className);
+                var resultMessage;
+                switch (prediction[0].className) {
+                    case "Disney Prince":
+                        resultMessage = "디즈니 왕자"
+                        break;
+                    case "Clearcut":
+                        resultMessage = "살아있는 조각상"
+                        break;
+                    case "Masculine":
+                        resultMessage = "마초중의 마초"
+                        break;
+                    default:
+                        resultMessage = "알수없음"
+                }
+                $('.result-message').html(resultMessage);
                 for (let i = 0; i < maxPredictions; i++) {
                     const classPrediction =
                         prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
