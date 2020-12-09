@@ -1,6 +1,8 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Yeon Sung', cursive;
   background-color: #ffffff;
+    box-sizing: border-box;
+  color: #35465d;
 }
 
 .file-upload {
@@ -123,7 +125,7 @@ body {
 }
 
 .navbar-light .navbar-brand{
-font-family: NanumSquareR;
+font-family: 'Yeon Sung', cursive;
 line-height: 1.68;
 text-align: left;
 color: #35465d;
@@ -138,14 +140,14 @@ color: #35465d;
 }
 
 .title {
-font-family: NanumSquareR;
+font-family: 'Yeon Sung', cursive;
 line-height: 1.67;
 text-align: center;
 color: #35465d;
 }
 
 .subtitle {
-font-family: NanumSquareR;
+font-family: 'Yeon Sung', cursive;
 line-height: 1.53;
 text-align: center;
 color: #35465d;
@@ -162,7 +164,7 @@ color: #35465d;
 }
 
 .youtube-link {
-    font-family: NanumSquareR;
+    font-family: 'Yeon Sung', cursive;
 font-size: 1.4rem;
 line-height: 1.71;
 text-align: center;
@@ -171,7 +173,7 @@ color: #f73737;
 }
 
 .youtube-link:hover {
-    font-family: NanumSquareR;
+    font-family: 'Yeon Sung', cursive;
 font-size: 1.4rem;
 line-height: 1.71;
 text-align: center;
@@ -201,7 +203,7 @@ width: 914px; height 703px; border-radius: 10px; border: solid 1.5px #f6f7fa; ba
 
 .upload-text{
     width: 50%
-font-family: NanumSquareR;
+font-family: 'Yeon Sung', cursive;
 font-size: 1.6rem;
 line-height: 1.53;
 text-align: cneter;
